@@ -1,10 +1,9 @@
 package com.hibernate.mongodb.entity;
 
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
@@ -17,7 +16,7 @@ public class Dog {
 
 	private String name;
 
-	@ManyToOne
+	@Embedded
 	private Breed breed;
 
 	public String getId() {
